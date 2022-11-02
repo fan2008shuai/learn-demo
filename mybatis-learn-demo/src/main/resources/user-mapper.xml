@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fan.learn.demo.quick.start.mapper.UserMapper">
+
+    <!-- jdbcType的值注意大小写   -->
+    <resultMap id="userMapper" type="org.fan.learn.demo.quick.start.bean.User">
+        <id property="id" column="id"  javaType="long" jdbcType="BIGINT"/>
+        <result property="userName" column="user_name" javaType="String" jdbcType="VARCHAR"/>
+        <result property="sex" column="sex"
+                typeHandler="org.fan.learn.demo.quick.start.type.handler.UserEnumTypeHandler"/>
+        <result property="mobile" column="mobile" javaType="String" jdbcType="VARCHAR"/>
+        <result property="email" column="email" javaType="String" jdbcType="VARCHAR"/>
+        <result property="note" column="note" javaType="String" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="getUserById" parameterType="long" resultMap="userMapper">
+        select * from t_user where id = #{id}
+    </select>
+
+    <insert id="insertNewUser" parameterType="user">
+        insert into t_user(user_name, sex, mobile, email, note) values(#{userName},
+        #{sex, typeHandler=org.fan.learn.demo.quick.start.type.handler.UserEnumTypeHandler},
+        #{mobile}, #{email}, #{note})
+    </insert>
+</mapper>
