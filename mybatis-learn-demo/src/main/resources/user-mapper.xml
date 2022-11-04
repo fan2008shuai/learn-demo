@@ -24,4 +24,9 @@
         #{sex, typeHandler=org.fan.learn.demo.quick.start.type.handler.UserEnumTypeHandler},
         #{mobile}, #{email}, #{note})
     </insert>
+
+    <!-- 如果返回的是list，resutMap表达的含义是list中元素的类型 -->
+    <select id="getUserListBySex" parameterType="sex" resultMap="userMapper">
+        select * from t_user where sex = #{sex, typeHandler=org.fan.learn.demo.quick.start.type.handler.UserEnumTypeHandler}
+    </select>
 </mapper>

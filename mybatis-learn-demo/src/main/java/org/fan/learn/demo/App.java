@@ -11,6 +11,7 @@ import org.fan.learn.demo.quick.start.mapper.UserMapper;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * Hello world!
@@ -41,6 +42,11 @@ public class App {
 
             User userFromDb = userMapper.getUserById(2);
             System.out.println("getUserById: " + userFromDb);
+
+            List<User> users = userMapper.getUserListBySex(User.Sex.MAN);
+            for (User usr : users) {
+                System.out.println("user: " + usr);
+            }
 
             sqlSession.commit();
         } catch (IOException e) {

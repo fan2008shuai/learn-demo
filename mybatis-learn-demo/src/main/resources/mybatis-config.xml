@@ -17,11 +17,16 @@
         <typeAlias alias="sex" type="org.fan.learn.demo.quick.start.bean.User$Sex"/>
     </typeAliases>
     <typeHandlers>
-
+        <typeHandler javaType="sex" jdbcType="VARCHAR"
+                     handler="org.fan.learn.demo.quick.start.type.handler.UserEnumTypeHandler"/>
     </typeHandlers>
     <environments default="development">
         <environment id="development">
-            <transactionManager type="JDBC"/>
+            <transactionManager type="JDBC">
+                <!-- JdbcTransactionFactory 只有一个配置 skipSetAutoCommitOnClose 在生效 -->
+                <!-- 下面的配置无效 -->
+                <property name="autoCommit" value="true"/>
+            </transactionManager>
             <dataSource type="POOLED">
                 <property name="driver" value="${driver}"/>
                 <property name="url" value="${url}"/>
