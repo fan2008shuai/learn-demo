@@ -8,6 +8,7 @@
   <modules>
     <module>mybatis-learn-demo</module>
       <module>spring-learn-demo</module>
+    <module>tcp-ip-learn-demo</module>
   </modules>
   <packaging>pom</packaging>
 
