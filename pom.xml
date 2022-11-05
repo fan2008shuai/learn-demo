@@ -7,6 +7,7 @@
   <version>1.0.0-SNAPSHOT</version>
   <modules>
     <module>mybatis-learn-demo</module>
+      <module>spring-learn-demo</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -19,13 +20,21 @@
 
   <dependencyManagement>
     <dependencies>
-
+      <!--  spring    -->
+      <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
       <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-lang3</artifactId>
-        <version>3.11</version>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>5.3.23</version>
       </dependency>
 
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>5.3.23</version>
+      </dependency>
+
+      <!--  mybatis    -->
       <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
       <dependency>
         <groupId>mysql</groupId>
@@ -38,6 +47,14 @@
         <groupId>org.mybatis</groupId>
         <artifactId>mybatis</artifactId>
         <version>3.5.11</version>
+      </dependency>
+
+
+      <!--  commons    -->
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.11</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
