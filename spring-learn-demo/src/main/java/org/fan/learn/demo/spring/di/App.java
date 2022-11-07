@@ -8,7 +8,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class App {
 
     public static void main(String[] args) {
-        System.setProperty("spring.profiles.active", "dev");
+        System.setProperty("spring.profiles.active", "prod");
+        System.setProperty("disc.artist", "spel tester");
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DiscConfig.class);
         MediaPlayer player = (MediaPlayer) context.getBean("player");
         player.play();
