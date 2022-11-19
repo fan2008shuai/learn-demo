@@ -6,6 +6,9 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.core.type.MethodMetadata;
 
+/**
+ * @author
+ */
 public class DiscCondition implements Condition {
     /**
      * Determine if the condition matches.

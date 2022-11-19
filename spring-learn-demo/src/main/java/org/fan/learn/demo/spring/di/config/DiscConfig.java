@@ -1,15 +1,10 @@
 package org.fan.learn.demo.spring.di.config;
 
 import org.fan.learn.demo.spring.di.condition.DiscCondition;
-import org.fan.learn.demo.spring.di.disc.AbstractDisc;
 import org.fan.learn.demo.spring.di.disc.BlankDisc;
 import org.fan.learn.demo.spring.di.disc.CompactDisc;
 import org.fan.learn.demo.spring.di.disc.SgtPepper;
-import org.fan.learn.demo.spring.di.player.CDPlayer;
-import org.fan.learn.demo.spring.di.player.MediaPlayer;
 import org.springframework.context.annotation.*;
-
-import java.io.PrintStream;
 
 @Configuration
 @ComponentScan(basePackages = {"org.fan.learn.demo.spring.di.disc",
