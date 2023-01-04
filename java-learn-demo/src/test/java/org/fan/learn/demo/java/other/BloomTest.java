@@ -43,11 +43,6 @@ public class BloomTest {
         System.out.println(bitSetKeySet.size());
         System.out.println("=====");
         System.out.println(hashKeyMapping);
-
-        System.out.println("============");
-        String appKey = "momo.mis.infra.onestore.security_encrypt\n\n";
-        System.out.println(appKey);
-        System.out.println("=============");
     }
 
 
