@@ -2,7 +2,7 @@
 <Configuration status="info" monitorInterval="2">
 
     <Properties>
-        <Property name="log_path">/tmp/logs/moa-service/onestore-cluster-statistic</Property>
+        <Property name="log_path">/tmp/logs/</Property>
     </Properties>
 
     <Appenders>
