@@ -17,6 +17,8 @@
       <module>spring-learn-demo</module>
     <module>tcp-ip-learn-demo</module>
       <module>spring-boot-learn-demo</module>
+    <module>java-learn-demo</module>
+      <module>sharding-sphere-learn-demo</module>
   </modules>
   <packaging>pom</packaging>
 
